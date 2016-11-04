@@ -9,8 +9,3 @@ apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtim
 apt-get -f install -y
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
 service webmin restart
-apt-get install openvpn -y
-cp -a /usr/share/doc/openvpn/examples/easy-rsa /etc/openvpn/
-cd /etc/openvpn/easy-rsa/2.0
-source ./vars
-./clean-all
